@@ -204,7 +204,7 @@ export function InstanceGeneralSettings() {
           <div className="space-y-1.5">
             <h2 className="text-sm font-semibold">Sign out</h2>
             <p className="max-w-2xl text-sm text-muted-foreground">
-              Sign out of this Paperclip instance. You will be redirected to the login page.
+              이 Paperclip 인스턴스에서 로그아웃합니다. 로그인 페이지로 이동합니다.
             </p>
           </div>
           <Button

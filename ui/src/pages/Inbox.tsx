@@ -290,7 +290,7 @@ export function FailedRunInboxRow({
             disabled={isRetrying}
           >
             <RotateCcw className="mr-1.5 h-3.5 w-3.5" />
-            {isRetrying ? "Retrying…" : "Retry"}
+            {isRetrying ? "재시도 중…" : "재시도"}
           </Button>
           {!showUnreadSlot && (
             <button
@@ -314,7 +314,7 @@ export function FailedRunInboxRow({
           disabled={isRetrying}
         >
           <RotateCcw className="mr-1.5 h-3.5 w-3.5" />
-          {isRetrying ? "Retrying…" : "Retry"}
+          {isRetrying ? "재시도 중…" : "재시도"}
         </Button>
         {!showUnreadSlot && (
           <button
@@ -1550,7 +1550,7 @@ export function Inbox() {
           <Search className="pointer-events-none absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" />
           <Input
             type="search"
-            placeholder="Search inbox…"
+            placeholder="받은함 검색…"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="h-8 w-full pl-8 text-xs"
@@ -1579,7 +1579,7 @@ export function Inbox() {
             <Search className="pointer-events-none absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" />
             <Input
               type="search"
-              placeholder="Search inbox…"
+              placeholder="받은함 검색…"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="h-8 w-[220px] pl-8 text-xs"
@@ -1924,7 +1924,7 @@ export function Inbox() {
                         <div key={`today-divider-${group.key}-${index}`} className="my-2 flex items-center gap-3 px-4">
                           <div className="flex-1 border-t border-zinc-600" />
                           <span className="shrink-0 text-[11px] font-medium uppercase tracking-wider text-zinc-500">
-                            Earlier
+                            이전
                           </span>
                         </div>,
                       );

@@ -599,7 +599,7 @@ export function Routines() {
               <PopoverTrigger asChild>
                 <Button variant="ghost" size="sm" className="text-xs">
                   <Layers className="h-3.5 w-3.5 sm:h-3 sm:w-3 sm:mr-1" />
-                  <span className="hidden sm:inline">Group</span>
+                  <span className="hidden sm:inline">그룹</span>
                 </Button>
               </PopoverTrigger>
               <PopoverContent align="end" className="w-44 p-0">

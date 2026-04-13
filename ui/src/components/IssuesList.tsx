@@ -170,9 +170,9 @@ function IssueSearchInput({
         onChange={(e) => {
           setDraftValue(e.target.value);
         }}
-        placeholder="Search issues..."
+        placeholder="이슈 검색..."
         className="pl-7 text-xs sm:text-sm"
-        aria-label="Search issues"
+        aria-label="이슈 검색"
       />
     </div>
   );
@@ -495,7 +495,7 @@ export function IssuesList({
         <div className="flex min-w-0 items-center gap-2 sm:gap-3">
           <Button size="sm" variant="outline" onClick={() => openNewIssue(newIssueDefaults())}>
             <Plus className="h-4 w-4 sm:mr-1" />
-            <span className="hidden sm:inline">New Issue</span>
+            <span className="hidden sm:inline">새 이슈</span>
           </Button>
           <IssueSearchInput
             value={issueSearch}
@@ -550,17 +550,17 @@ export function IssuesList({
               <PopoverTrigger asChild>
                 <Button variant="ghost" size="sm" className="text-xs">
                   <ArrowUpDown className="h-3.5 w-3.5 sm:h-3 sm:w-3 sm:mr-1" />
-                  <span className="hidden sm:inline">Sort</span>
+                  <span className="hidden sm:inline">정렬</span>
                 </Button>
               </PopoverTrigger>
               <PopoverContent align="end" className="w-48 p-0">
                 <div className="p-2 space-y-0.5">
                   {([
-                    ["status", "Status"],
-                    ["priority", "Priority"],
-                    ["title", "Title"],
-                    ["created", "Created"],
-                    ["updated", "Updated"],
+                    ["status", "상태"],
+                    ["priority", "우선순위"],
+                    ["title", "제목"],
+                    ["created", "생성일"],
+                    ["updated", "수정일"],
                   ] as const).map(([field, label]) => (
                     <button
                       key={field}
@@ -594,18 +594,18 @@ export function IssuesList({
               <PopoverTrigger asChild>
                 <Button variant="ghost" size="sm" className="text-xs">
                   <Layers className="h-3.5 w-3.5 sm:h-3 sm:w-3 sm:mr-1" />
-                  <span className="hidden sm:inline">Group</span>
+                  <span className="hidden sm:inline">그룹</span>
                 </Button>
               </PopoverTrigger>
               <PopoverContent align="end" className="w-44 p-0">
                 <div className="p-2 space-y-0.5">
                   {([
-                    ["status", "Status"],
-                    ["priority", "Priority"],
-                    ["assignee", "Assignee"],
-                    ["workspace", "Workspace"],
-                    ["parent", "Parent Issue"],
-                    ["none", "None"],
+                    ["status", "상태"],
+                    ["priority", "우선순위"],
+                    ["assignee", "담당자"],
+                    ["workspace", "워크스페이스"],
+                    ["parent", "상위 이슈"],
+                    ["none", "없음"],
                   ] as const).map(([value, label]) => (
                     <button
                       key={value}
@@ -631,8 +631,8 @@ export function IssuesList({
       {!isLoading && filtered.length === 0 && viewState.viewMode === "list" && (
         <EmptyState
           icon={CircleDot}
-          message="No issues match the current filters or search."
-          action="Create Issue"
+          message="현재 필터 또는 검색 조건에 맞는 이슈가 없습니다."
+          action="이슈 만들기"
           onAction={() => openNewIssue(newIssueDefaults())}
         />
       )}
